@@ -7,37 +7,37 @@
  <script>
  
               "use strict";
-function fKostenfunktion() {
+function Kostenfunktion() {
 
-                    var vfK=parseFloat;
-                    var vx=parseFloat;
-                    var vvK=parseFloat;
-                    var vStart = parseFloat;
-                    var vAusgabe = "";
-                    var vEndwert =parseFloat;
-                    var vKostenfunktion;
+                    var fK = parseFloat;
+                    var vK = parseFloat;
+                    var Start = parseFloat;
+                    var Ausgabe = "";
+                    var Endwert = parseFloat;
+                    var SW= parseFloat;
+                    var Kostenfunktion;
                     
-                    vStart = document.getElementById("idStart").value;
-                    vEndwert = document.getElementById("idEndwert").value;
-                    vvK = document.getElementById("idvK").value;
-                    vfK = document.getElementById("idfK").value;
-                    vx = document.getElementById("idvx").value;
+                    Start = document.getElementById(" Start").value;
+                    Endwert = document.getElementById("Endwert").value;
+                    vK = document.getElementById("vK").value;
+                    fK = document.getElementById("fK").value;
+                    SW = document.getElementById("SW").value;
                     
                     vAusgabe = vAusgabe + "<table border=1> <br>";
                     vAusgabe = vAusgabe + "<tr><th>x</th><th>K(x)</th></tr>";
                     
-                    while (vStart<=vEndwert) {
+                    while (Start<=Endwert) {
                       
-                        vKostenfunktion = vvK * vStart * vfK;
+                        Kostenfunktion = vK * Start * fK;
                          
-                        vAusgabe = vAusgabe + "<tr></td>" + vStart + "<tr><td>"+vKostenfunktion + "</td><\tr>";
+                        Ausgabe = Ausgabe + "<tr></td>" + Start + "<tr><td>"+ Kostenfunktion + "</td><\tr>";
                     
-                         vStart = vStart + vx;
+                         Start = Start + SW;
                     
                     }
-                        vAusgabe = vAusgabe + "</table>" + <br>;
+                        Ausgabe = Ausgabe + "</table>" + <br>;
                         
-                        document.getElementById("idAusgabe").innerHTML =vAusgabe;
+                        document.getElementById("Ausgabe").innerHTML = Ausgabe;
                         
               
               
@@ -49,14 +49,14 @@ function fKostenfunktion() {
       
       <h1>Kostenfunktion</h1>
       
-      Start: <input id="idStart" type="text"  value="-10">
-      Ende: <input id="idEndwert" type="text"  value="10">
-      Variable Kosten: <input id="idvK" type="text"  value="2">
-      Fixe Kosten: <input id="idfK" type="text"  value="20">
-      vx: <input id="idvx" type="text" value="">
+      Start: <input id="Start" type="text"  value="-10">
+      Ende: <input id="Endwert" type="text"  value="10">
+      Variable Kosten: <input id="vK" type="text"  value="2">
+      Fixe Kosten: <input id="fK" type="text"  value="20">
+      SW: <input id="SW" type="text" value="">
       
-      <button onClick="fKostenfunktion()">Kostenfunktion berechnen!</button>
-      <div id="idAusgabe"></div>
+      <button onClick="Kostenfunktion()">Kostenfunktion berechnen!</button>
+      <div id="Ausgabe"></div>
       
   </body>
 </html>
