@@ -1,0 +1,67 @@
+<html>
+  <head>
+  
+      <title>Kostenfunktion</title>
+      
+      <meta http-equiv="Content-Type" content="text/html; chatset=utf-8">
+ <script>
+ 
+              "use strict";
+function fKostenfunktion() {
+
+                    var vfixeKosten;
+                    var vx;
+                    var vvariableKosten;
+                    var vKvonx;
+                    var vStart =-10;
+                    var vAusgabe = "";
+                    var vEndwert = 10;
+                    
+                    vStart = document.getElementById("idStart").value;
+                    vEndwert = document.getElementById("idEndwert").value;
+                    vvariableKosten = document.getElementById("idvariableKosten").value;
+                    vfixeKosten = document.getElementById("idfixeKosten").value;
+                    
+                    vAusgabe = vAusgabe + "<table border=1>";
+                    vAusgabe = vAusgabe + "<tr><th>x</th><th>K(x)</th></tr>";
+                    
+                    vKx = vvariableKosten * vx + vfixeKosten;
+                    
+                    while (vStart<=vEndwert) {
+                      
+                        vKx = vvariableKosten * vx * vfixeKosten;
+                        
+                        vAusgabe = vAusgabe + "<td>"+vx+"</td>" + "<td>"+vKvonx + "</td>";
+                    
+                    vvariableKosten++
+                    
+                    }
+                        vAusgabe = vAusgabe + "</table>";
+                        
+                        document.getElementById("idAusgabe").innerHTML =vAusgabe;
+                        
+                        
+                    }
+              
+              
+  </script>
+</head>
+
+  <body>
+
+      
+      <h1>Kostenfunktion</h1>
+      
+      Start: <input id="idStart" type="text"  value="10" maxlength="100"   size="5"><br><br>
+      Ende: <input id="idEndwert" type="text"  value="10" maxlength="100"  size="5"><br><br>
+      Kostenvariable: <input id="idvariableKosten" type="text"  value="2" maxlength="100"  size="5"><br><br>
+      Fixe Kosten: <input id="idfixeKosten" type="text"  value="20" maxlength="100"  size="5"><br><br>
+      
+      <button onClick="fKostenfunktion();">Kostenfuntion berechnen!</button>
+      <div id="idAusgabe"></div>
+      
+  </body>
+</html>
+                   
+                   
+                    
