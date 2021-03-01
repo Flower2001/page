@@ -1,65 +1,67 @@
-<html>
-  <head>
-  
-      <title>Kostenfunktion</title>
-      
-      <meta http-equiv="Content-Type" content="text/html; chatset=utf-8">
- <script>
+<!DOCTYPE html>
+<html lang="en">
  
-              "use strict";
-function Kostenfunktion() {
-
-                    var fK = parseFloat;
-                    var vK = parseFloat;
-                    var Start = parseFloat;
-                    var Ausgabe = "";
-                    var Endwert = parseFloat;
-                    var SW= parseFloat;
-                    var Kostenfunktion;
-                    
-                    Start = document.getElementById(" Start").value;
-                    Endwert = document.getElementById("Endwert").value;
-                    vK = document.getElementById("vK").value;
-                    fK = document.getElementById("fK").value;
-                    SW = document.getElementById("SW").value;
-                    
-                    vAusgabe = vAusgabe + "<table border=1> <br>";
-                    vAusgabe = vAusgabe + "<tr><th>x</th><th>K(x)</th></tr>";
-                    
-                    while (Start<=Endwert) {
-                      
-                        Kostenfunktion = vK * Start * fK;
-                         
-                        Ausgabe = Ausgabe + "<tr></td>" + Start + "<tr><td>"+ Kostenfunktion + "</td><\tr>";
-                    
-                         Start = Start + SW;
-                    
-                    }
-                        Ausgabe = Ausgabe + "</table>" + <br>;
-                        
-                        document.getElementById("Ausgabe").innerHTML = Ausgabe;
-                        
-              
-              
-  </script>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+    <title>Kostenfunktion</title>
+ 
+    <script>
+ 
+        function Rechne() {
+ 
+            var kv = parseFloat      (document.getElementById("kv").value);
+            var kf = parseFloat      (document.getElementById("kf").value);
+            var start = parseFloat   (document.getElementById("start").value);
+            var end = parseFloat     (document.getElementById("end").value);
+            var schritt = parseFloat (document.getElementById("schritt").value);
+ 
+            var Kostenfunktion;
+ 
+            var ausgabe = "";
+ 
+            ausgabe = ausgabe + "<table border = 1> <br>";
+            ausgabe = ausgabe + "<tr><th>x</th><th>K(x)</th></tr>";
+ 
+            while (start <= end) {
+ 
+                Kostenfunktion = kv * start + kf;
+ 
+                ausgabe = ausgabe + "<tr><td>" + start + "</td><td>" + Kostenfunktion + "</td></tr>";
+ 
+                start = start + schritt;
+            
+            }
+ 
+            ausgabe = ausgabe + "</table>" + "<br>";
+            document.getElementById("ausgabe").innerHTML = ausgabe;
+ 
+}
+    </script>
+ 
 </head>
+ 
+<body>
+    
+    Variable Kosten: <input id="kv" type="text" value="">       <br>
+    fixe Kosten: <input id="kf" type="text" value="">           <br>
+    Startwert: <input id="start" type="text" value="">          <br>
+    Endwert: <input id="end" type="text" value="">              <br>
+    Schrittweite: <input id="schritt" type="text" value="">     <br> <br>
+ 
+    <button onclick="Rechne()">berechne</button>           <br>
+ 
+    <div id="ausgabe"></div>
 
-  <body>
 
-      
-      <h1>Kostenfunktion</h1>
-      
-      Start: <input id="Start" type="text"  value="-10">
-      Ende: <input id="Endwert" type="text"  value="10">
-      Variable Kosten: <input id="vK" type="text"  value="2">
-      Fixe Kosten: <input id="fK" type="text"  value="20">
-      SW: <input id="SW" type="text" value="">
-      
-      <button onClick="Kostenfunktion()">Kostenfunktion berechnen!</button>
-      <div id="Ausgabe"></div>
-      
-  </body>
+
+
+
+ 
+</body>
+
+
+ 
 </html>
-                   
-                   
-                    
