@@ -20,7 +20,7 @@
             ausgabe = ausgabe + "<tr><th>Jahr</th><th>Kapital am 1.1.</th><th>Zinsen am 31.12.</th><th>Kapital am 31.12.</th></tr>";
  
             while (start <= ende) {
-                gesamtkosten = start *(1+zs/100);
+                gesamtkosten = zs *(1+start/100);
                 ausgabe = ausgabe + "<tr><td>" + start + "</td><td>" + gesamtkosten + "</td></tr>";
                 start++;
             }
