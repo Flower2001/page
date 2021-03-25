@@ -1,6 +1,7 @@
 <html>
-    <head>
-     <title>Rentenendwertrechner</title>
+    
+     <head>
+     <title>Nachschüssiger Rentenendwertrechner</title>
      <meta http-equiv="Conten-Type" content="text/html; charset=utf-8">
 
      <script>
@@ -15,9 +16,9 @@
           
           function fRechner() {
 
-               var vZinssatz = parseFloat(document.getElementById("idZinssatz").value);
-               var vNRente = parseFloat(document.getElementById("idNRente").value);
-               var vLaufzeit =  parseFloat(document.getElementById("idLaufzeit").value);
+               var vZinssatz =     parseFloat(document.getElementById("idZinssatz").value);
+               var vRente = parseFloat(document.getElementById("idRente").value);
+               var vLaufzeit =     parseFloat(document.getElementById("idLaufzeit").value);
                
                var vZinsfaktor = 1 + vZinssatz / 100;
                var vRentenendwert = vRente * (Math.pow(vZinsfaktor, vLaufzeit) -1) / (vZinsfaktor -1);
@@ -29,7 +30,7 @@
                var vKapitalJahresAnfang = 0;
 
                var vAusgabe = "";
-               vAusgabe = vAusgabe + "Das Rentenendwert beträgt " + fEuro(vRentenendwert) + ".<br><br>";
+               vAusgabe = vAusgabe + "Das Rentenendkwert beträgt " + fEuro(vRentenendwert) + ".<br><br>";
                
                vAusgabe = vAusgabe + "<table border=1>";
                vAusgabe = vAusgabe + "<tr><th>Jahr</th><th>Kapital am 1.1.</th><th>Zinsen am 31.12.</th><th>Rente am 31.12</th><th>Kapital am 31.12.</th></tr>";
@@ -64,11 +65,11 @@
 
     <body>
 
-        <h1>Nachsüssiger Rentenendwertrechner</h1>
+        <h1>Nachschüssiger Rentenendwertrechner</h1>
 
-        Zinssatz:  <input id="idZinssatz" type="text" value="2">%<br>
-        Nachschüssige Rente: <input id="idNRente" type="text" value="100">€<br>
-        Laufzeit: <input id="idLaufzeit" type="text" value="5"> Jahre<br><br>
+        Zinssatz:       <input id="idZinssatz" type="text" value="2">%<br>
+        Nachschüssige Rente:   <input id="idRente" type="text" value="100">€<br>
+        Laufzeit:       <input id="idLaufzeit" type="text" value="5"> Jahre<br><br>
 
         <button onClick="fRechner()">Berechnen</button><br><br>
 
