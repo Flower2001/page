@@ -9,11 +9,13 @@
          var vEinzelpreis = 10 €;
          var vMenge;
          var vAusgabe;
+         var vGesamtpreis;
          
          
          vMenge = document.getElementById("idMenge").value;
+         vEinzelpreis = document.getElementById("idEinzelpreis").value;
          
-         vAusgabe = vEinzelpreis * vMenge;
+         vGesamtpreis = vEinzelpreis * vMenge;
          
          document.getElementById("idAusgabe").innerHTML = vAusgabe;
          
@@ -24,8 +26,8 @@
   
   <body>
     <h1>Eingabemöglichkeiten mot Berechnungen aus Variablen</h1>
-    vEinzelpreis: 10€<br><br>
-    vMenge: <input id="idMenge" type="text" value="xxx"><br><br>
+    Einzelpreis: 10€<br><br>
+    Menge: <input id="idMenge" type="text" value="xxx"><br><br>
     <button onClick="fGesamtpreis();">Ausgabe von Gesamtpreis</button><br><br>
     <div id="idAusgabe">Bitte den Button für die Berechnung des Gesamtpreises klicken!</div>
   </body>
