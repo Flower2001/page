@@ -1,0 +1,24 @@
+<html>
+  <head>
+    <title>Berechnen</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <script>
+      "use strict";
+
+      function fBerechne() {
+         var vEinzelpreis = 1,50€;
+         var vMenge = 50;
+         var vGesamtpreis = vEinzelpreis * vMenge;
+         var vAusgabe;
+         document.getElementById("idAusgabe").innerHTML = vAusgabe;
+      }
+
+    </script>
+  </head>
+
+  <body>
+    <h1>Berechnen</h1>
+    <button onClick="fBerechne();">Berechne</button>
+    <div id="idAusgabe">Bitte das Button klicken!</div>
+  </body>
+</html>
