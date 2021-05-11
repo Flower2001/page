@@ -1,0 +1,35 @@
+<html>
+  <head>
+    <title>Ausgabemöglichkeiten</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <script>
+      "use strict"
+      
+      function fDivPreis() {
+        document.getElementById("idAusgabe").innerHTML = "Der Preis"
+      }
+      
+      function fDivBetraegt() {
+        document.getElementById("idAusgabe").innerHTML = beträgt"
+      }
+      
+      function fDiv150() {
+        document.getElementById("idAusgabe").innerHTML = "150€"
+      }
+      
+       function fDivPreisausgabe() {
+        document.getElementById("idAusgabe").innerHTML = "Der Preis beträgt 150€"
+      }
+      
+    </script>
+  </head>
+  
+  <body>
+    <h1>Ausgabemöglichkeiten</h1>
+    <button onClick="fDivPreis();"> Ausgabe von 'Preis' in ein Div-Element!</button>
+    <button onClick="fDivBetraegt();"> Ausgabe von 'beträgt' in ein Div-Element!</button>
+    <button onClick="fDiv150();"> Ausgabe von '150€' in ein Div-Element!</button>
+    <button onClick="fDivPreisausgabe();"> Ausgabe von 'Der Preis beträgt 150€' in ein Div-Element!</button>
+    <div id="idAusgabe">Bitte den Button klicken! Nach dem Klicken des Buttons erscheint hier eine Ausgabe </div>
+  </body>
+</html>
