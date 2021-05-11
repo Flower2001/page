@@ -19,6 +19,20 @@
         document.getElementById("idAusgabe").innerHTML = vAusgabe;
        }
       
+      function fGutenTag() {
+        alert("Guten Tag");
+        console.log("Guten Tag");
+        document.getElementById("idAusgabe").innerHTML = "Guten Tag";
+      }
+      
+      function fGutenTagWelt() {
+        var vAusgabe;
+        vAusgabe = "Guten Tag Welt";
+        alert("Guten Tag Welt");
+        console.log("Guten Tag Welt")
+        document.getElementById("idAusgabe").innerHTML = "Guten Tag Welt";
+      }
+      
      </script>
    </head>
     
@@ -26,6 +40,8 @@
       <h1>Ausgabemöglichkeiten ohne und mit Variable</h1>
       <button onClick="fHallo1();">Direkte Ausgabe von 'Hallo' wie vorher!</button>
       <button onClick="fHallo2();">Ausgabe von 'Hallo' mit Hilfe einer Variablen vAusgabe!</button><br><br>
+       <button onClick="fGutenTag();">Direkte Ausgabe von 'Guten Tag' wie vorher!</button>
+      <button onClick="fGutenTagWelt();">Ausgabe von 'Guten Tag Welt' mit Hilfe einer Variablen vAusgabe!</button><br><br>
       <div id="idAusgabe">Bitte die Buttons klicken!</div>
     </body>
 </html>
