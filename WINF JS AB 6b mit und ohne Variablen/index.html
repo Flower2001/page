@@ -1,0 +1,41 @@
+<html>
+  <head>
+    <title>Ausgabemöglichkeiten> ohne und mit Variabley/title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <script>
+      "use strict";
+      
+      function fAusgabe1() {
+        alert("Der Preis beträgt 150€.");
+        console.log("Der Preis beträgt 150€."):
+        document.getElementById(idAusgabe").innerHTML = "Der Preis beträt 1,50€.";
+      }
+      
+      function fAusgabe2() {
+        var vAusgabe;
+        vAusgabe= "Der neue Preis beträgt 1,00€.";
+        alert(vAusgabe);
+        console.log(vAusgabe);
+        document.getElementById("idAusgabe").innerHTML = vAusgabe;
+      }
+      
+        function fBerechne() 
+          var vEinzelpreis = 1,50€;
+          var vMenge = 50;
+          var vGesamtpreis = vEinzelpreis * vMenge;
+          var vAusgabe;
+          document.getElementById("idAusgabe").innerHTML =vAusgabe;
+        
+        }
+      
+    </script>
+  </head>
+  
+  <body>
+    <h1>Ausgabemöglichkeiten ohne und mit Variable</h1>
+    <button onClick="fAusgabe1();">Direkte Ausgabe von 'Preis' wie vorher!</button>
+    <button onClick=fAusgabe2();">Ausgabe von 'Preis' mit Hilfe einer Variablen vAusgabe!</button><br><br>
+    <button onClick=fBerechne();">Ausgabe von 'Gesamtpreis' mit Hilfe einer Variablen vAusgabe!</button><br><br>
+    <div id="idAusgabe">Bitte die Buttons klicken!</div>
+  </body>
+</html>
