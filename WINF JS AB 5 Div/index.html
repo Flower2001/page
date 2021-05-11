@@ -1,0 +1,28 @@
+<html>
+  <head>
+    <title>Ausgabemöglichkeiten</title>
+    <meta htp-equiv="Content-Type" content="text/html; charset=utf-8">
+    <script>
+      "use scrict";
+
+      function fDivHallo() {
+        document.getElementById("idAusgabe").innerHTML = "Hallo"
+      }
+      function fDivWelt() {
+        document.getElementById("idAusgabe").innerHTML = "Welt"
+      }
+      function fDivAusrufezeichen() {
+        document.getElementById("idAusgabe").innerHTML = "!"
+      }
+
+    </script>
+  </head>
+
+  <body>
+    <h1>Ausgabemöglichkeiten</h1>
+    <button onClick="fDivHallo();">Ausgabe von 'Hallo' in ein Div-Element!</button><br><br>
+    <button onClick="fDivWelt();">Ausgabe von 'Welt' in ein Div-Element!</button><br><br>
+    <button onClick="fDivAusrufezeichen();">Ausgabe von '!' in ein Div-Element!</button><br><br>
+    <div id="idAusgabe">Bitte den Bitton klicken! Nach dem Klicken des Buttons erscheint hier eine Ausgabe.</div>
+  </body>
+</html>
