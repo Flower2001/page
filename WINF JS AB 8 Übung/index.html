@@ -1,25 +1,56 @@
 <html>
   <head>
-    <title>Unterrichtsstunde</title>
+    <title>Wie war die heutige Unterrichtsstunde?</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     
    <script>
      "use strict";
      
-     function fBewerten() {
+     function fTop() {
        var vVorname;
        var vKlasse;
        var vAusgabe;
        
-       document.getElementById("idVorname").value;
-       document.getElementById("idKlasse").value;
+       vVorname= document.getElementById("idVorname").value;
+       vKlasse= document.getElementById("idKlasse").value;
        
        vAusgabe = "";
        vAusgabe = vAusgabe + vVorname;
        vAusgabe = vAusgabe + " aus der " + vKlasse;
-       vAusgabe = vAusgabe + " fand die heutige Stunde " + vAusgabe + "!";
+       vAusgabe = vAusgabe + " fand die heutige Stunde top!";
        
-       document.getElementById("idAusgabe").innerHTML = vAusgabe
+       document.getElementById("idAusgabe").innerHTML = vAusgabe;
+    }
+     
+      function fSolala() {
+       var vVorname;
+       var vKlasse;
+       var vAusgabe;
+       
+       vVorname= document.getElementById("idVorname").value;
+       vKlasse= document.getElementById("idKlasse").value;
+       
+       vAusgabe = "";
+       vAusgabe = vAusgabe + vVorname;
+       vAusgabe = vAusgabe + " aus der " + vKlasse;
+       vAusgabe = vAusgabe + " fand die heutige Stunde so lala!";
+       
+       document.getElementById("idAusgabe").innerHTML = vAusgabe;
+    }
+      function fbloed() {
+       var vVorname;
+       var vKlasse;
+       var vAusgabe;
+       
+       vVorname= document.getElementById("idVorname").value;
+       vKlasse= document.getElementById("idKlasse").value;
+       
+       vAusgabe = "";
+       vAusgabe = vAusgabe + vVorname;
+       vAusgabe = vAusgabe + " aus der " + vKlasse;
+       vAusgabe = vAusgabe + " fand die heutige Stunde blöd!";
+       
+       document.getElementById("idAusgabe").innerHTML = vAusgabe;
     }
     </script>
   </head>
@@ -28,7 +59,7 @@
     <h1>Wie war die heutige Unterrichtsstunde?</h1>
     Vorname: <input id="idVorname" type="text" value="xxx"><br><br>
     Klasse: <input id="idKlasse" type="text" value="xxx"><br><br>
-    <button onClick="fBewerten();">Top:)</button>
-    <button onClick="fBewerten();">So lala :|</button>
-    <button onClick="fBewerten();">blöd :(</button>
+    <button onClick="fTop();">Top:)</button>
+    <button onClick="fSolala();">So lala :|</button>
+    <button onClick="fbloed();">blöd :(</button>
     <div id="idAusgabe">Hier steht später, wie die heutige Unterrichtsstunde bewertet wurde</div>
