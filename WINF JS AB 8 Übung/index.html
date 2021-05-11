@@ -1,0 +1,34 @@
+<html>
+  <head>
+    <title>Unterrichtsstunde</h1>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    
+   <script>
+     "use strict";
+     
+     function fBewerten() {
+       var vVorname;
+       var vKlasse;
+       var vName;
+       
+       document.getElementById("idVorname").value;
+       document.getElementById("idKlasse").value;
+       
+       vName = "";
+       vName = vName + vVorname;
+       vName = vName + " aus der " + vKlasse;
+       vName = vName + " fand die heutige Stunde ";
+       
+       document.getElementById("idAusgabe").innerHTML = vName;
+       
+    </script>
+  </head>
+  
+  <body>
+    <h1>Wie war die heutige Unterrichtsstunde?</h1>
+    Vorname: <input id="idVorname" type="text" value="xxx"><br><br>
+    Klasse: <input id="idKlasse" type="text" valuie="xxx"><br><br>
+    <button onClick="fBewerten();">Top:)</button>
+    <button onClick="fBewerten();">So lala :|</button>
+    <button onClick="fBewerten();">blöd :(</button>
+    <div id="idAusgabe">Hier steht später, wie di eheutige Unterrichtsstunde bewertet wurde</div>
