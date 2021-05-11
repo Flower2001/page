@@ -1,0 +1,30 @@
+<html>
+  <head>
+    <title>Verkettung von Strings</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <script>
+      "use strict";
+      
+      function fHallo() {
+        var vAusgabe;
+        vAusgabe = "";
+        alert(vAusgabe);
+        vAusgabe = vAusgabe + "Hallo ";
+        alert(vAusgabe);
+        vAusgabe = vAusgabe + "Du ";
+        alert(vAusgabe);
+        vAusgabe = vAusgabe + "da!";
+        alert(vAusgabe);
+        
+        document.getElementById("idAusgabe").innerHTML = vAusgabe;
+      }
+      
+    </script>
+  </head>
+  
+  <body>
+    <h1>Verkettung von Strings</h1>
+    <button onClick="fHallo();">Ausgabe von 'Hallo Du da!'</button><br><br>
+    <div id="idAusgabe">Bitte den Button klicken!</div>
+  </body>
+</html>
