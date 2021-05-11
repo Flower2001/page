@@ -1,0 +1,41 @@
+<html>
+  <head>
+    <title>Preisberechnung aus der eingegebenen Menge und dem Einzelpreis</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <script>
+      "use strict";
+      
+      function fPreisberechnung() {
+        //Variablen
+        var vEinzelpreis;
+        var vMenge;
+        var vGesamtpreis;
+        var vAusgabe;
+        
+        //Eingabe
+        vEinzelpreis = document.getElementById("idEinzelpreis").value;
+        vMenge = document.getElementById("idMenge").value;
+        
+        //Verarbeitung
+        vGesamtpreis = Einzelpreis * vMenge;
+        vAusgabe = "Der Gesamtpreis beträgt " + vGesamtpreis + "€";
+        
+        //Ausgabe
+        // zur Erinnerung alert(vGesamtpreis);
+        // zur Einnerung console.log(vGesamtpreis);
+        document.getElementById("idAusgabe").innerHTML = vAusgabe;
+     }
+      
+    </script>
+  </head>
+
+  <body>
+    <h1>Kirsch AG</h1>
+    <h2>Preisberechnung aus der eingegebenen Menge und dem Einzelpreis</h2>
+    Einzelpreis in €: <input id="idEinzelpreis" type="text" value="xxx"> <br /> <br />
+    Menge in Stück: <input id="idMenge" type="text" value="xxx"> <br /><br />
+    <button onClick="fPreisberechnung();">Berechnung des Gesamtpreises</button></p></p>
+    <div id="idAusgabe"> Bitte klicken Sie den Button für die Berechnung des Gesamtpreises! </div>
+  </body>
+</html>
+      
