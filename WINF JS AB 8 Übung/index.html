@@ -9,17 +9,17 @@
      function fBewerten() {
        var vVorname;
        var vKlasse;
-       var vName;
+       var vAusgabe;
        
        document.getElementById("idVorname").value;
        document.getElementById("idKlasse").value;
        
-       vName = "";
-       vName = vName + vVorname;
-       vName = vName + " aus der " + vKlasse;
-       vName = vName + " fand die heutige Stunde ";
+       vAusgabe = "";
+       vAusgabe = vAusgabe + vVorname;
+       vAusgabe = vAusgabe + " aus der " + vKlasse;
+       vAusgabe = vAusgabe + " fand die heutige Stunde ";
        
-       document.getElementById("idAusgabe").innerHTML = vName
+       document.getElementById("idAusgabe").innerHTML = vAusgabe
     }
     </script>
   </head>
@@ -27,8 +27,8 @@
   <body>
     <h1>Wie war die heutige Unterrichtsstunde?</h1>
     Vorname: <input id="idVorname" type="text" value="xxx"><br><br>
-    Klasse: <input id="idKlasse" type="text" valuie="xxx"><br><br>
+    Klasse: <input id="idKlasse" type="text" value="xxx"><br><br>
     <button onClick="fBewerten();">Top:)</button>
     <button onClick="fBewerten();">So lala :|</button>
     <button onClick="fBewerten();">blöd :(</button>
-    <div id="idAusgabe">Hier steht später, wie di eheutige Unterrichtsstunde bewertet wurde</div>
+    <div id="idAusgabe">Hier steht später, wie die heutige Unterrichtsstunde bewertet wurde</div>
