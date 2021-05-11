@@ -1,0 +1,31 @@
+<html>
+  <head>
+    <title>Ausgabemöglichkeiten ohne und mit Variable</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <script>
+      "use strict";
+      
+      function fHallo1() {
+        alert("Hallo");
+        console.log("Hallo");
+        document.getElementById("idAusgabe").innerHTML = "Hallo";
+      }
+      
+      function fHallo2() {
+        var vAusgabe;
+        vAusgabe ="Hallo Welt!";
+        alert(vAugabe);
+        console.log(vAusgabe);
+        document.getElementById("idAusgabe").innerHTML = vAusgabe;
+       }
+      
+     </script>
+   </head>
+    
+    <body>
+      <h1>Ausgabemöglichkeiten ohne und mit Variable</h1>
+      <button onClick="fHallo1();">Direkte Ausgabe von 'Hallo' wie vorher!</button>
+      <button onClick="fHallo2();">Ausgabe von 'Hallo' mit Hilfe einer Variablen vAusgabe!</button><br><br>
+      <div id="idAusgabe">Bitte die Buttons klicken!</div>
+    </body>
+</html>
