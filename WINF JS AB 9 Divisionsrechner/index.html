@@ -1,0 +1,41 @@
+<html>
+  <head>
+    <title>Divisionsrechner</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <script>
+      "use strict";
+      function fRechne() {
+        var vDividend;
+        var vDivisor;
+        
+        vDividend = document.getElementById("idDividend").value;
+        vDivisor = document.getElementById("idDivisor").value;
+        
+        var vQuotient;
+        vQuotient  = vDividend / vDivisor;
+        
+        var vAusgabeHtml;
+        
+        vAusgabeHtml = "";
+        
+        vAusgabeHtml = vAusgabeHtml + "Der Quotient von ";
+        vAusgabeHtml = vAusgabeHtml + vDividend;
+        vAusgabeHtml = vAusgabeHtml + " und ";
+        vAusgabeHtml = vAusgabeHtml + vDivisor;
+        vAusgabeHtml = vAusgabeHtml + " ist ";
+        vAusgabeHtml = vAusgabeHtml + vQuotient;
+        vAusgabeHtml = vAusgabeHtml + ".";
+        
+        document.getElementById("idAusgabeHtml").innerHTML = vAusgabeHtml;
+      }
+    </script>
+  </head>
+  
+  <body>
+    <h1>Divisionsrechner</h1>
+    Dividend: <input id="idDividend" type="text" value="10"><br />
+    Divisor: <input id="idDivisor" type="text" value="5"><br /><br />
+    <button onClick="fRechne();">Berechne Quotienten</button><br /><br />
+    <div id="idAusgabeHtml">Hier kommt beim Klicken auf den Button ein Ergebnis.</div>
+  </body>
+</html>
