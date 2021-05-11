@@ -8,14 +8,14 @@
        function fGesamtpreis() {
          var vEinzelpreis = 10 €;
          var vMenge;
-         var vAusgabe;
          var vGesamtpreis;
-         
-         
+         var vAusgabe;
+          
          vMenge = document.getElementById("idMenge").value;
          vEinzelpreis = document.getElementById("idEinzelpreis").value;
          
          vGesamtpreis = vEinzelpreis * vMenge;
+         vAusgabe = vGesamtpreis;
          
          document.getElementById("idAusgabe").innerHTML = vAusgabe;
          
@@ -25,7 +25,7 @@
   </head>
   
   <body>
-    <h1>Eingabemöglichkeiten mot Berechnungen aus Variablen</h1>
+    <h1>Eingabemöglichkeiten mit Berechnungen aus Variablen</h1>
     Einzelpreis: 10€<br><br>
     Menge: <input id="idMenge" type="text" value="xxx"><br><br>
     <button onClick="fGesamtpreis();">Ausgabe von Gesamtpreis</button><br><br>
