@@ -1,0 +1,32 @@
+<html>
+   <head>
+     <title>Eingabemöglichkeiten mit Berechnungen aus Variablen</title>
+     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+     <script>
+       "use strict";
+       
+       function fGesamtpreis() {
+         var vEinzelpreis = 10 €;
+         var vMenge;
+         var vAusgabe;
+         
+         
+         vMenge = document.getElementById("idMenge").value;
+         
+         vAusgabe = vEinzelpreis * vMenge;
+         
+         document.getElementById("idAusgabe").innerHTML = vAusgabe;
+         
+       }
+       
+     </script>
+  </head>
+  
+  <body>
+    <h1>Eingabemöglichkeiten mot Berechnungen aus Variablen</h1>
+    vEinzelpreis: 10€
+    vMenge: <input id="idMenge" type="text" value="xxx">
+    <button onClick="fGesamtpreis();">Ausgabe von Gesamtpreis</button>
+    <div id="idAusgabe">Bitte den Button für die Berechnung des Gesamtpreises klicken!</div>
+  </body>
+</html>
