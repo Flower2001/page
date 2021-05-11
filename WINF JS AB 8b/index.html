@@ -1,0 +1,39 @@
+<html>
+  <head>
+    <title>Eingabemöglichkeiten und Ausgabemöglichkeiten aus Variablen</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <script>
+       "use strict";
+      
+      //Funktion fAusgabe begiint hier
+      function fAusgabe() {
+        
+        //Die Variable vMenge wird deklariert (Deklaration)
+        var vMenge;
+        
+        //Der Variable vMenge wird der Wert (value) von Eingabefeld "idMenge" zugewiesen
+        vMenge = document.getElementById("idMenge").value;
+        
+        //Ausgabe des Inhaltes der Variable vMenge über ein Popup-Fenster mit alert 
+        alert(vMenge);
+        
+        //Ausgabe des Inhaltes der Variable vMenge über die Konsole (F12)
+        console.log(vMenge);
+        
+        //Ausgabe des Inhaltes der Variable vMenge über DIV "idAusgabe" auf der HTML-Seite
+        //Das DIV-Element "idAusgabe" wird mit der Methode getElementById und seiner ID gefunden
+        //innerHTML wird gleich dem Inhalt der Variable vMenge gesetzt
+        document.getElementById("idAusgabe").iinerHTML = vMenge;
+        
+      }
+      
+    </script>
+  </head>
+  
+  <body>
+    <h1>Eingabemöglichkeiten und Ausgabemöglichkeiten aus Variablen</h1>
+    Menge: <input id="idMenge" type="text" value="xxx"> <br /><br />
+    <button onClick="fAusgabe();">Ausgabe von Menge</button></p></p>
+    <div id="idAusgabe">Bitte den Button für die drei Ausgabemöglichkeiten von der Variable vMenge klicken! </div>
+  </body>
+</html>
