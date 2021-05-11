@@ -1,0 +1,38 @@
+<html>
+  <head>
+    <title>Eingabemöglichkeiten</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <script>
+      "use strict"
+      
+      function fName() {
+      
+        var vVorname;
+        var vNachname;
+        var vName;
+        
+        vVorname= document.getElementById("idVorname").value;
+        vNachname= document.getElementById("idNachname").value;
+        
+        vName = "";
+        vName = vName + vVorname;
+        vName = vName + " ";
+        vName = vName + vNachname;
+        
+        document.getElementById("idAusgabe").innerHTML = vName
+        
+      }
+      
+    </script>
+  </head>
+  
+  <body>
+  
+    <h1>Eingabemöglichkeiten</h1>
+    Vorname: <input id="idVorname" type="text" value="xxx"><br /><br />
+    Nachname: <input id="idNachname" type="text" value="xxx"><br /><br />
+    <button onClick="fName();">Ausgabe des Vor- und Nachnamens!</button><br><br>
+    <div id="idAusgabe">Bitte den Button klicken! Nach dem Klicken des Buttons erscheint hier eine Ausgabe. </div>
+  </body>
+</html>
+        
