@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<!-- saved from url=(0073)file://lsbk/21ASS2-07$/Downloads/Schaltjahrpr%C3%BCfer_vorw%C3%A4rts.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Schaltjahrprüfer</title>
+
+<script>
+"use strict";
+
+function fSchaltjahrprüfer() {
+
+var vStart
+var vStop
+var vAusgabe="";
+var vJahr
+var vJahre;
+
+
+vJahr = parseFloat(document.getElementById("idJahr").value);
+vJahre = parseFloat(document.getElementById("idJahre").value);
+vStop=parseFloat(vStop);
+vStop=vJahr+vJahre;
+
+vAusgabe = vAusgabe + "<table border=1>";
+vAusgabe = vAusgabe + "<tr><th>Jahr</th><th>Bemerkung<tr>";
+
+while (vJahr<=vStop) {
+
+  if (vJahr%4 == 0 && (vJahr%100 != 0 || vJahr%400 == 0)) {
+    vAusgabe = vAusgabe + "<tr><td style=background-color:pink>
+    "+vJahr+"</td><td>Es ist ein Schaltjahr</td></tr>";
+  }
+  else {
+    vAusgabe = vAusgabe + "<tr><td>"+vJahr+"</td><td>Es ist kein Schaltjahr</td></tr></tr>";
+  }
+
+vJahr++
+
+}
+vAusgabe = vAusgabe + "</table>";
+
+document.getElementById("idAusgabe").innerHTML = vAusgabe;
+
+}
+
+</script>
+</head>
+
+<body>
+<h1>Schaltjahrprüfer</h1>
+
+Startjahr:<input id="idJahr" type="text" value="2020" maxlength="50" size="3"><br><br>
+Laufzeit:<input id="idJahre" type="text" value="100" maxlength="50" size="3"><br><br>
+<button onclick="fSchaltjahrprüfer();">Auswerten</button>
+<div id="idAusgabe"><table border="1"><tbody><tr><th>Jahr</th><th>Bemerkung</th></tr><tr></tr>
+<tr><td style="background-color:pink">2020</td><td>Es ist ein Schaltjahr</td></tr><tr><td>2021</td>
+<td>Es ist kein Schaltjahr</td></tr><tr><td>2022</td><td>Es ist kein Schaltjahr</td></tr><tr><td>2023</td>
+<td>Es ist kein Schaltjahr</td></tr><tr><td style="background-color:pink">2024</td><td>Es ist ein Schaltjahr</td></tr>
+<tr><td>2025</td><td>Es ist kein Schaltjahr</td></tr><tr><td>2026</td><td>Es ist kein Schaltjahr</td></tr><tr><td>2027</td><td>Es ist kein Schaltjahr</td></tr><tr><td style="background-color:pink">2028</td><td>Es ist ein Schaltjahr</td></tr><tr><td>2029</td><td>Es ist kein Schaltjahr</td></tr><tr><td>2030</td><td>Es ist kein Schaltjahr</td></tr><tr><td>2031</td><td>Es ist kein Schaltjahr</td></tr><tr><td style="background-color:pink">2032</td><td>Es ist ein Schaltjahr</td></tr><tr><td>2033</td><td>Es ist kein Schaltjahr</td></tr><tr><td>2034</td><td>Es ist kein Schaltjahr</td></tr><tr><td>2035</td><td>Es ist kein Schaltjahr</td></tr><tr><td style="background-color:pink">2036</td><td>Es ist ein Schaltjahr</td></tr><tr><td>2037</td><td>Es ist kein Schaltjahr</td></tr><tr><td>2038</td><td>Es ist kein Schaltjahr</td></tr><tr><td>2039</td><td>Es ist kein Schaltjahr</td></tr><tr><td style="background-color:pink">2040</td><td>Es ist ein Schaltjahr</td></tr><tr><td>2041</td><td>Es ist kein Schaltjahr</td></tr><tr><td>2042</td><td>Es ist kein Schaltjahr</td></tr><tr><td>2043</td><td>Es ist kein Schaltjahr</td></tr><tr><td style="background-color:pink">2044</td><td>Es ist ein Schaltjahr</td></tr><tr><td>2045</td><td>Es ist kein Schaltjahr</td></tr><tr><td>2046</td><td>Es ist kein Schaltjahr</td></tr><tr><td>2047</td><td>Es ist kein Schaltjahr</td></tr><tr><td style="background-color:pink">2048</td><td>Es ist ein Schaltjahr</td></tr><tr><td>2049</td><td>Es ist kein Schaltjahr</td></tr><tr><td>2050</td><td>Es ist kein Schaltjahr</td></tr><tr><td>2051</td><td>Es ist kein Schaltjahr</td></tr><tr><td style="background-color:pink">2052</td><td>Es ist ein Schaltjahr</td></tr><tr><td>2053</td><td>Es ist kein Schaltjahr</td></tr><tr><td>2054</td><td>Es ist kein Schaltjahr</td></tr><tr><td>2055</td><td>Es ist kein Schaltjahr</td></tr><tr><td style="background-color:pink">2056</td><td>Es ist ein Schaltjahr</td></tr><tr><td>2057</td><td>Es ist kein Schaltjahr</td></tr><tr><td>2058</td><td>Es ist kein Schaltjahr</td></tr><tr><td>2059</td><td>Es ist kein Schaltjahr</td></tr><tr><td style="background-color:pink">2060</td><td>Es ist ein Schaltjahr</td></tr><tr><td>2061</td><td>Es ist kein Schaltjahr</td></tr><tr><td>2062</td><td>Es ist kein Schaltjahr</td></tr><tr><td>2063</td><td>Es ist kein Schaltjahr</td></tr><tr><td style="background-color:pink">2064</td><td>Es ist ein Schaltjahr</td></tr><tr><td>2065</td><td>Es ist kein Schaltjahr</td></tr><tr><td>2066</td><td>Es ist kein Schaltjahr</td></tr><tr><td>2067</td><td>Es ist kein Schaltjahr</td></tr><tr><td style="background-color:pink">2068</td><td>Es ist ein Schaltjahr</td></tr><tr><td>2069</td><td>Es ist kein Schaltjahr</td></tr><tr><td>2070</td><td>Es ist kein Schaltjahr</td></tr><tr><td>2071</td><td>Es ist kein Schaltjahr</td></tr><tr><td style="background-color:pink">2072</td><td>Es ist ein Schaltjahr</td></tr><tr><td>2073</td><td>Es ist kein Schaltjahr</td></tr><tr><td>2074</td><td>Es ist kein Schaltjahr</td></tr><tr><td>2075</td><td>Es ist kein Schaltjahr</td></tr><tr><td style="background-color:pink">2076</td><td>Es ist ein Schaltjahr</td></tr><tr><td>2077</td><td>Es ist kein Schaltjahr</td></tr><tr><td>2078</td><td>Es ist kein Schaltjahr</td></tr><tr><td>2079</td><td>Es ist kein Schaltjahr</td></tr><tr><td style="background-color:pink">2080</td><td>Es ist ein Schaltjahr</td></tr><tr><td>2081</td><td>Es ist kein Schaltjahr</td></tr><tr><td>2082</td><td>Es ist kein Schaltjahr</td></tr><tr><td>2083</td><td>Es ist kein Schaltjahr</td></tr><tr><td style="background-color:pink">2084</td><td>Es ist ein Schaltjahr</td></tr><tr><td>2085</td><td>Es ist kein Schaltjahr</td></tr><tr><td>2086</td><td>Es ist kein Schaltjahr</td></tr><tr><td>2087</td><td>Es ist kein Schaltjahr</td></tr><tr><td style="background-color:pink">2088</td><td>Es ist ein Schaltjahr</td></tr><tr><td>2089</td><td>Es ist kein Schaltjahr</td></tr><tr><td>2090</td><td>Es ist kein Schaltjahr</td></tr><tr><td>2091</td><td>Es ist kein Schaltjahr</td></tr><tr><td style="background-color:pink">2092</td><td>Es ist ein Schaltjahr</td></tr><tr><td>2093</td><td>Es ist kein Schaltjahr</td></tr><tr><td>2094</td><td>Es ist kein Schaltjahr</td></tr><tr><td>2095</td><td>Es ist kein Schaltjahr</td></tr><tr><td style="background-color:pink">2096</td><td>Es ist ein Schaltjahr</td></tr><tr><td>2097</td><td>Es ist kein Schaltjahr</td></tr><tr><td>2098</td><td>Es ist kein Schaltjahr</td></tr><tr><td>2099</td><td>Es ist kein Schaltjahr</td></tr><tr><td>2100</td><td>Es ist kein Schaltjahr</td></tr><tr><td>2101</td><td>Es ist kein Schaltjahr</td></tr><tr><td>2102</td><td>Es ist kein Schaltjahr</td></tr><tr><td>2103</td><td>Es ist kein Schaltjahr</td></tr><tr><td style="background-color:pink">2104</td><td>Es ist ein Schaltjahr</td></tr><tr><td>2105</td><td>Es ist kein Schaltjahr</td></tr><tr><td>2106</td><td>Es ist kein Schaltjahr</td></tr><tr><td>2107</td><td>Es ist kein Schaltjahr</td></tr><tr><td style="background-color:pink">2108</td><td>Es ist ein Schaltjahr</td></tr><tr><td>2109</td><td>Es ist kein Schaltjahr</td></tr><tr><td>2110</td><td>Es ist kein Schaltjahr</td></tr><tr><td>2111</td><td>Es ist kein Schaltjahr</td></tr><tr><td style="background-color:pink">2112</td><td>Es ist ein Schaltjahr</td></tr><tr><td>2113</td><td>Es ist kein Schaltjahr</td></tr><tr><td>2114</td><td>Es ist kein Schaltjahr</td></tr><tr><td>2115</td><td>Es ist kein Schaltjahr</td></tr><tr><td style="background-color:pink">2116</td><td>Es ist ein Schaltjahr</td></tr><tr><td>2117</td><td>Es ist kein Schaltjahr</td></tr><tr><td>2118</td><td>Es ist kein Schaltjahr</td></tr><tr><td>2119</td><td>Es ist kein Schaltjahr</td></tr><tr><td style="background-color:pink">2120</td><td>Es ist ein Schaltjahr</td></tr></tbody></table></div>
+
+
+
+</body></html>
