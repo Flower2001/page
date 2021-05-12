@@ -1,0 +1,47 @@
+<html>
+	<head>
+		<title>Fakultät</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<script>
+			"use strict";
+			
+			function fFakultaet(vZahl) {
+				
+				if (vZahl == 1) {
+					return 1;
+				} else {
+					return vZahl * fFakultaet (vZahl-1);
+				}
+			}
+				
+				/*var vZaehler = vZahl;
+				var vProdukt = 1;	
+				
+				while(vZaehler < vzahl) {
+					
+					vProdukt = vprodukt * vZaehler;
+					vZaehler = vZaehler - 1;
+				}
+				
+				return vprodukt;
+			}*/
+		
+			function fAusgabeAnzeigen(){
+		
+				
+				var vZahl = document.getElementById("idZahl").value;
+				
+				var vFakultaet = fFakultaet(vZahl);
+				var vAusgabe = "Die Fakultät von " + vZahl + " ist " + vFakultaet + ".";
+				
+				document.getElementById("idAusgabe").innerHTML = vAusgabe;
+			}
+		</script>
+	</head>
+	<body>
+		<h1>Fakultät</h1>
+		Zahl: <input id="idZahl" type="text" value="1"><br>
+		<button onClick="fAusgabeAnzeigen();">Berechne die Fakultaet</button><br><br>
+		<div id="idAusgabe">Klicke auf den Button!</div>
+	</body>
+</html>
