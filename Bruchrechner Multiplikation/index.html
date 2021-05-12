@@ -1,0 +1,54 @@
+<html>
+
+	<head>
+
+		<title>Bruchrechner (Multiplikation)</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+
+
+		<script>
+
+			"use strict";
+
+			function fBruchrechnen() {
+
+				var vZaehler1;
+				var vNenner1;
+				var vZaehler2;
+				var vNenner2;
+				var vAusgabe;
+
+				vZaehler1 = document.getElementById("idZaehler1").value;
+				vNenner1 = document.getElementById("idNenner1").value;
+				vZaehler2 = document.getElementById("idZaehler2").value;
+				vNenner2 = document.getElementById("idNenner2").value;
+
+				vAusgabe = parseInt(vZaehler1,vNenner1,vZaehler2,vNenner2);
+				vAusgabe = (vZaehler1*vZaehler2) / (vNenner1*vNenner2);
+
+				vAusgabe = "Ergebnis: " + vAusgabe;
+
+				document.getElementById("idAusgabe").innerHTML = vAusgabe;
+			}
+
+		</script>
+
+	</head>
+
+
+
+	<body>
+
+		<h1>Burchumrechner (Multiplikation)</h1>
+		(<input id="idZaehler1" type="text" value="6">/
+		<input id="idNenner1" type="text" value="5">) *
+		(<input id="idZaehler2" type="text" value="3">/
+		<input id="idNenner2" type="text" value="4">)
+
+		<button onClick="fBruchrechnen();">Berechne Produkt</button>
+		<div id="idAusgabe"></div>
+		</body>
+
+</html>
