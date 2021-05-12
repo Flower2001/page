@@ -1,0 +1,30 @@
+<html>
+	<head>
+		<title>Produkt</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<script>
+			"use strict";
+			var fAusgabe = function(vFaktor1, vFaktor2) {
+				var vProdukt = vFaktor1 * vFaktor2;
+				return `Das Produkt von  ${vFaktor1} und ${vFaktor2} ist ${vProdukt}.`;
+			}
+
+			var fAusgabeAnzeigen = function() {
+				var vFaktor1 = document.getElementById("idFaktor1").value;
+				var vFaktor2 = document.getElementById("idFaktor2").value;
+				document.getElementById("idAusgabe").innerHTML = fAusgabe(vFaktor1, vFaktor2);
+			}
+
+		</script>
+
+	<body>
+		<h1>Produkt</h1>
+
+		Faktor 1: <input id="idFaktor1" type="text" value="3"><br>
+		Faktor 2: <input id="idFaktor2" type="text" value="2"><br><br>
+
+		<button onClick="fAusgabeAnzeigen();">Berechne das Produkt</button><br><br>
+
+		<div id="idAusgabe">Klicke auf den Button!</div>
+	</body>
+</html>
