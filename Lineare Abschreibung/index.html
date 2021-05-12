@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Lineare Abschreiung</title>
+<script>
+function fNameFunktion(){
+"use strict";
+
+var vAusgabe
+var vDauer
+var vWert
+var vJahr= 1
+var vAbschreibung
+
+vWert=document.getElementById("idWert").value
+vDauer=document.getElementById("idDauer").value
+
+vAbschreibung = vWert / vDauer
+
+
+vAusgabe = " "
+vAusgabe = vAusgabe+"<table border = 1>"
+vAusgabe = vAusgabe + "<tr><th>Nutzungsjahr</th><th>Abschreibung</th><th>Restwert</th></tr>"
+
+while ( vJahr <= vDauer) {
+
+	vWert = vWert - vAbschreibung;
+
+if (vWert.toFixed(2) == 0) {
+	vAusgabe = vAusgabe + "<tr><td>" + vJahr + "</td><td>" +  vAbschreibung.toFixed(2) + 
+  " € </td><td style=color:green>" + vWert.toFixed(2) + " € </td></tr>";}
+else {
+	vAusgabe = vAusgabe + "<tr><td>" + vJahr + "</td><td>" +  vAbschreibung.toFixed(2) + 
+  " € </td><td style=color:red>" + vWert.toFixed(2) + " € </td></tr>";
+}
+
+
+vJahr = vJahr + 1;
+}
+
+vAusgabe = vAusgabe + "</table>";
+
+document.getElementById("idAusgabe").innerHTML=vAusgabe;
+}
+</script>
+</head>
+
+<body>
+	<h1>Lineare Abschreibung</h1>
+	<p>Anschaffungswert: <input id="idWert" type="text" value="250000" maxlength="10" size="10"> in Euro</p>
+	<p>Nutzungsdauer: <input id="idDauer" type="text" value="6" maxlength="10" size="10"> in Jahren</p>
+	<button onClick="fNameFunktion();">Lineare Abschreibung berechnen!</button>
+
+<div id="idAusgabe"></div>
+
+</body>
+</html>
