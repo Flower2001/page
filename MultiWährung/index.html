@@ -1,0 +1,65 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Währungsumrechner</title>
+</head>
+<script>
+
+
+function fUmrechner(){
+	//Variablen Deklaration
+var vTagesKurs;
+var vDollar;
+var vEuro;
+var vBetrag;
+var vAusgabeHtml="";
+var vRechnung;
+
+	//Wertezudordnungen aus HTML
+
+  vTagesKurs=document.getElementById("idKurs").value;
+	var vQuellwaehrung=document.getElementById("idQuellwaehrung").value;
+	var vZielwaehrung=document.getElementById("idZielwaehrung").value;
+	var vBetrag=document.getElementById("idBetrag").value;
+// Rechnung
+if(vQuellwaehrung== "Euro" && vZielwaehrung=="Dollar"){
+vRechnung= vBetrag * vTagesKurs;
+AusgabeHtml="";
+vAusgabeHtml=vAusgabeHtml + "</br> Sie erhalten: " + vRechnung.toFixed(2) + " $ ";
+}
+else if (vQuellwaehrung== "Dollar" && vZielwaehrung=="Euro"){
+vRechnung = vBetrag * vTagesKurs;
+vAusgabeHtml=vAusgabeHtml + " </br> Sie erhalten: " + vRechnung.toFixed(2) + " € ";
+}
+
+else {
+  vAusgabeHtml= " </br> Ziel- und Quellwährung identisch "
+}
+
+		document.getElementById("idAusgabeHtml").innerHTML=vAusgabeHtml;
+
+}
+
+</script>
+
+<body>
+<h1>Währungsumrechner</h1>
+
+Quellwährung:<select id="idQuellwaehrung">
+		<option>Euro</option>
+		<option>Dollar</option>
+    </select>
+
+Zielwährung:<select id="idZielwaehrung">
+		<option>Euro</option>
+		<option>Dollar</option>
+	</select>
+
+Tageskurs: <input id="idKurs" value="0.91" size="5">
+Umrechnungsbetrag: <input id="idBetrag" value="500" size="5">
+
+<button onClick="fUmrechner();">Umrechner</button>
+<div id="idAusgabeHtml"></div>
+
+</body>
+</html>
