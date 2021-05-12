@@ -1,53 +1,44 @@
 <html>
-
 	<head>
+	<title>MwSt-Rechner</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<script>
+	"use strict";
+		function fMehrwertsteuer (){
+			var vNettopreis;
+			var vMwStSatz;
+			var vMwSt;
+			var vBruttopreis;
+			var vAusgabe;
 
-		<title>MwSt-Rechner</title>
+	vNettopreis= document.getElementById("idNetto").value;
+	vMwStSatz= document.getElementById("idSteuer").value;
+	vMwStSatz = vMwStSatz / 100;
 
-		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-
-		
-
-		<script>
-
-			"use strict";
-
-			function fMehrwertsteuer (){
-			
-				var vNettopreis;
-				var vMwStSatz;
-				var vMwSt;
-				var vBruttopreis;
-				var vAusgabe;
-
-				vNettopreis= document.getElementById("idNetto").value;
-				vMwStSatz= document.getElementById("idSteuer").value;
-				vMwStSatz = vMwStSatz / 100;
-
-				vMwSt = vNettopreis * vMwStSatz;
-				vBruttopreis =  parseFloat(vNettopreis) + vMwSt;
+	vMwSt = vNettopreis * vMwStSatz;
+	vBruttopreis =  parseFloat(vNettopreis) + vMwSt;
 				
-				vAusgabe = "";
-				vAusgabe = vAusgabe + "Der Bruttopreis beträgt: " + vBruttopreis.toFixed(2)+ "€ ";
-				vAusgabe = vAusgabe + "und die enthaltene MwSt beträgt: " + vMwSt.toFixed(2) + "€.";
+	vAusgabe = "";
+	vAusgabe = vAusgabe + "Der Bruttopreis beträgt: " + vBruttopreis.toFixed(2)+ "€ ";
+	vAusgabe = vAusgabe + "und die enthaltene MwSt beträgt: " + vMwSt.toFixed(2) + "€.";
 		
-				document.getElementById("idAusgabe").innerHTML = vAusgabe;
-			}
+	document.getElementById("idAusgabe").innerHTML = vAusgabe;
+		}
 
-		</script>
+	</script>
 
-	</head>
+</head>
 
 
 
-	<body>
+<body>
 
-		<h1>Mehrwertsteuer-Rechner</h1>
+	<h1>Mehrwertsteuer-Rechner</h1>
 
-			Nettopreis:  <input id="idNetto" type="text" value="">
-			MwSt-Satz: <input id="idSteuer" type="text" value="">
-			<button onClick="fMehrwertsteuer();">Berechnen</button></br></br>
-			<div id="idAusgabe"></div>
-	</body>
+	Nettopreis:  <input id="idNetto" type="text" value="">
+	MwSt-Satz: <input id="idSteuer" type="text" value="">
+	<button onClick="fMehrwertsteuer();">Berechnen</button></br></br>
+	<div id="idAusgabe"></div>
+</body>
 
 </html>
