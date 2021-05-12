@@ -1,0 +1,33 @@
+<html>
+	<head>
+		<title>Wurzel</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<script>
+
+			"use strict";
+			
+			function fQuadrat () {
+			    var vWurzel;
+				var vEingabe;
+				
+				vEingabe = document.getElementById("idQWurzel").value;
+				
+				vWurzel = Math.sqrt(vEingabe);
+				
+				 document.getElementById("idWurzel").innerHTML = vWurzel;
+			}
+
+		</script>
+
+	</head>
+
+	<body>
+
+		<h1>Wurzel</h1>
+		Zahl 1: <input id="idQWurzel" type="text" value="xxx"><br /> <br />
+		<button onClick="fQuadrat();"> Wurzel </button> </p> </p>
+		<div id="idWurzel"> Ergebnis wird hier unten ausgegeben. </div>
+		
+	</body>
+
+</html>
