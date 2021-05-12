@@ -1,0 +1,31 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>Temperaturenrechner</title>
+
+		<script>
+			"use-strict";
+			var toFahrenheit = function(celsius) {
+			  return 1.8 * celsius + 32;
+			};
+
+			function fUmrechnen() {
+			var	vCelsius = document.getElementById("idCelsius").value;
+			var vAusgabe = 'Die Temperatur ist' + toFahrenheit(vCelsius);
+			document.getElementById("idAusgabe").innerHTML = vAusgabe;
+     }
+
+		</script>
+	</head>
+
+	<body>
+		<h1>Temperaturenrechner</h1>
+		Temperatur in Celsius:
+		<input id="idCelsius" type="text" value="20">
+		Grad
+<br><br>
+		<button onClick="fUmrechnen();">Rechne!</button>
+		<br><br>
+		<div id="idAusgabe">Drücke den Knopf!</div>
+	</body>
+</html>
