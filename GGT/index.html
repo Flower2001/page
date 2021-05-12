@@ -1,0 +1,26 @@
+<html>
+
+<head>
+	<title>Produkt</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<script>
+		"use strict";
+		function fAusgabeAnzeigen(){
+		var vZahl1 = document.getElementById("idZahl1").value;
+		var vZahl2 = document.getElementById("idZahl2").value;
+		var vGGT = 3;
+		var vAusgabe = `Der ggT von ${vZahl1} und ${vZahl2} ist
+    ${vGGT}.`; document.getElementById("idAusgabe").innerHTML = vAusgabe;
+		}
+		</script>
+</head>
+
+<body>
+
+	<h1>GGT</h1>
+	Zahl 1: <input id="idZahl1" type="text" value="15"><br>
+	Zahl 2: <input id="idZahl2" type="text" value="24"><br><br>
+	<button onClick="fAusgabeAnzeigen();">Berechne den ggT</button><br><br>
+	<div id="idAusgabe">Klick auf den Button!</div>
+</body>
+</html>
