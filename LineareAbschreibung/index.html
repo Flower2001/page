@@ -1,0 +1,49 @@
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8;
+    <title> Lineare Abschreibung </title>
+    
+    <script>
+      "use strict"
+      
+        function fAbschreibung() {
+          var vAusgabe="";
+          var vWert;
+          var vDauer;
+          var vJahr;
+          var vAbschreibung;
+          var vRest;
+          
+          vWert= document.getElementById("idWert").value;
+          vDauer = document.getElementById("idDauer").value;
+          
+          vAbschreibung =vWert/vDauer;
+          vAusgabe =vAusgabe + "<table border=1>";
+          vAusgabe = vAusgabe + "<tr><th>Nutzungedauer in Jahren</th><th>Abschreibung</th><th>Restwert</th></tr>";
+          
+          while (vJahr <= vDauer) {
+          
+            vRest =vWert - (vJahr*vAbschreibung);
+            vAusgabe = vAusgabe + "<tr><td>" + vJahr + "</td><td>" + vAbschreibung + "</td><td>" + vRest + "</td></tr>";
+            vJahr++;
+            
+           }
+            
+            vAusgabe = vAusgabe + "</table>"
+            document.getElementById("idAusgabe").innerHTML = vAusgabe;
+           }
+        </script>
+      </head>
+      
+      <body>
+      <h1>Lineare Abschreibung</h1>
+      Anschaffungwert: <input id="idWert" value="xxx"> in Euro
+      </br>
+      Nutzungsdauer: <input id="idDauer" value="xxx"> in Jahren 
+      </br>
+      
+      <button onClick="fLineareAbschreibung();">Beschriftung</button>
+      <div id="idAusgabe"></div>
+      
+    </body>
+  </html>
