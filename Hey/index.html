@@ -1,0 +1,55 @@
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charcet=UTF-8">
+    <title>Tilgungsplan</title>
+      <script>
+        "use strict"
+        
+          function fTilgung() {
+            var vAusgabe="";
+            var vStartjahr=1;
+            var vKreditbetrag;
+            var vLaufzeit;
+            var vZins;
+            var vTilgung;
+            var vAnnuitaet;
+            var vZinsen;
+            var vRestschuld;
+            
+            vKreditbetrag = parseFloat(document.getElementById("idKreditbetrag").value);
+            vLaufzeit = parseFloat(document.getElementById("idLaufzeit").value);
+            vZins = parseFloat(document.getElementById("idZins").value)/100;
+            
+            vRestschuld = vKreditbetrag;
+            vAnnuitaet = vKreditbetrag * ((Math.pow((1+vZins),vLaufzeit)*vZins)/((Mathpow((1+vZins),vLaufzeit)*vZins))-1)));
+            
+            vAusgabe = vAusgabe + "<table border=1>";
+            vAusgabe = vAusgabe + "<tr><th>Jahr</th><th>Schulden in €</th><th>Zinsen in €</th><th>Annuität in €</th><th>Tilgung in €</th><th>Restschuld in €</th></tr>;
+            
+            while (vStartjahr <= vLaufzeit) {
+              
+              vZinsen = vKreditbetrag * vZins;
+              vTilgung = vAnnuitaet - vZinsen;
+              vRestschuld = vRestschuld - vTilgung;
+              
+              vAusgabe = vAusgabe + "<tr><td>" + vStartjahr + "</td><td>" + vKreditbetrag.toFixed(2) + "</td><td>" + vZinsen.toFixed(2) + "</td><td>" + vAnnuitaet.toFixed(2) + "</td><td>" + vTilgung.toFixed(2) + "</td><td>" + vRestschuld + "</td></tr>";
+              vKreditbetrag =vKreditbetrag - vTilgung;
+              vStartjahr++;
+              
+              vAusgabe = "</table>";
+              
+              document.getElementById("idAusgabe").innerHTML = vAusgabe;
+              
+        </script>
+      </head>
+      
+      <body>
+        Kreditbetrag: <input id="idKreditbetrag" value="xxx">
+        Laufzeit: <input id="idLaufzeit" value="xxx">
+        Zins: <input id="idZins" value="xxx">
+        
+        <button onClick="fTilgungs();">Tilgungsplan erstellen</button>
+        <div id="idAusgabe></div>
+        
+      </body>
+  </html>
